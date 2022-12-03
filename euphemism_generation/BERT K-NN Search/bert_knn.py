@@ -31,7 +31,6 @@ class ContextNeighborStorage:
         self.normed_embeddings = (all_embeddings.T / (all_embeddings**2).sum(axis=1) ** 0.5).T
 
     def build_search_index(self):
-        # this takes some time
         self.indexer = KDTree(self.normed_embeddings)
 
     def query(self, query_sent, query_word, k=10, filter_same_word=False):
@@ -81,6 +80,7 @@ if __name__ == "__main__":
         lines = f.readlines()
     all_sentences = np.asarray(lines)
 
+    # THIS TAKES A VERY LONG TIME! SEVERAL HOURS
     BERT_MODEL = BertEmbedding()
     storage = ContextNeighborStorage(sentences=all_sentences, model=BERT_MODEL)
     storage.process_sentences()
