@@ -4,7 +4,7 @@ import re
 import json
 
 
-parser = argparse.ArgumentParser(description="Downloads cleaned English text body from Gab dataset")
+parser = argparse.ArgumentParser(description="Extracts banned sentences from cleaned Gab dataset")
 parser.add_argument("-y", "--year", type=int,
                     help="Year of Gab dataset from 2016-08 to 2018-10")
 parser.add_argument("-m", "--month", type=int,
