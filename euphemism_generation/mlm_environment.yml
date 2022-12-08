@@ -1,0 +1,9 @@
+name: /storage/home/hcocice1/nkai3/dsn/env
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - pandas
+  - requests
+  - transformers
+prefix: /storage/home/hcocice1/nkai3/dsn/env

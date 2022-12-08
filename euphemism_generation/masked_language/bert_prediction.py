@@ -4,7 +4,7 @@ from collections import Counter
 from transformers import pipeline, AutoTokenizer
 
 
-parser = argparse.ArgumentParser(description="Downloads cleaned English text body from Gab dataset")
+parser = argparse.ArgumentParser(description="Runs BERT MLM on sentences with banned keywords")
 parser.add_argument("-y", "--year", type=int,
                     help="Year of Gab dataset from 2016-08 to 2018-10")
 parser.add_argument("-m", "--month", type=int,
